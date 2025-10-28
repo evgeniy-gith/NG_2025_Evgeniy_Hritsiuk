@@ -4,7 +4,6 @@ using namespace std;
 int main() {
     double num1, num2, result;
     int operation;
-    setlocale(LC_ALL, "Rus");
 
     cout << "Viberite operaciyu (+, -, *, /,^, sqrt): " << endl;
     cout << "\nViberite odnu iz dostupnih operaciy:" << endl;
@@ -13,39 +12,28 @@ int main() {
     cout << "  '3' - Umnozhenie" << endl;
     cout << "  '4' - Delenie" << endl;
     cout << "  '5' - Vozvedenie v stepen'" << endl;
-    cout << "  '6' - Kvadratniy koren'\n ";
+    cout << "  '6' - Kvadratniy koren'" << endl;
     cout << "Vash vibor: ";
     cin >> operation;
-    switch (operation) {
-    case 1: '1';
-        cout << "Vvedite pervoe chislo:\n ";
+    if (operation >= 1 && operation <= 4) {
+        cout << "Vvedite pervoe i vtoroe chislo: " << endl;
         cin >> num1;
-        cout << "Vvedite vtoroe chislo:\n ";
         cin >> num2;
+    }
+    switch (operation) {
+    case 1:
         result = num1 + num2;
         cout << "Rezul'tat: " << result;
         break;
-    case 2: '2';
-        cout << "Vvedite pervoe chislo: ";
-        cin >> num1;
-        cout << "Vvedite vtoroe chislo: ";
-        cin >> num2;
+    case 2:
         result = num1 - num2;
         cout << "Rezul'tat: " << result;
         break;
-    case 3: '3';
-        cout << "Vvedite pervoe chislo: ";
-        cin >> num1;
-        cout << "Vvedite vtoroe chislo: ";
-        cin >> num2;
+    case 3:
         result = num1 * num2;
         cout << "Rezul'tat: " << result;
         break;
-    case 4: '4';
-        cout << "Vvedite pervoe chislo: ";
-        cin >> num1;
-        cout << "Vvedite vtoroe chislo: ";
-        cin >> num2;
+    case 4:
         if (num2 != 0) {
             result = num1 / num2;
             cout << "Rezul'tat: " << result;
@@ -54,7 +42,7 @@ int main() {
             cout << "Oshibka";
         }
         break;
-    case 5: '5';
+    case 5:
         cout << "Vvedite chislo: ";
         cin >> num1;
         cout << "Vvedite chislo v kotoroe hotite vozvesti stepen': ";
@@ -62,7 +50,7 @@ int main() {
         result = pow(num1, num2);
         cout << "Rezul'tat: " << result;
         break;
-    case 6: '6';
+    case 6:
         cout << "Vvedite chislo: ";
         cin >> num1;
         if (num1 >= 0) {
