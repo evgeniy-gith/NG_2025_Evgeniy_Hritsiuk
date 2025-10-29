@@ -23,20 +23,16 @@ int main() {
     switch (operation) {
     case 1:
         result = num1 + num2;
-        cout << "Rezul'tat: " << result;
         break;
     case 2:
         result = num1 - num2;
-        cout << "Rezul'tat: " << result;
         break;
     case 3:
         result = num1 * num2;
-        cout << "Rezul'tat: " << result;
         break;
     case 4:
         if (num2 != 0) {
             result = num1 / num2;
-            cout << "Rezul'tat: " << result;
         }
         else {
             cout << "Oshibka";
@@ -48,14 +44,12 @@ int main() {
         cout << "Vvedite chislo v kotoroe hotite vozvesti stepen': ";
         cin >> num2;
         result = pow(num1, num2);
-        cout << "Rezul'tat: " << result;
         break;
     case 6:
         cout << "Vvedite chislo: ";
         cin >> num1;
         if (num1 >= 0) {
             result = sqrt(num1);
-            cout << "Rezul'tat: " << result;
         }
         else {
             cout << "Oshibka";
@@ -64,4 +58,5 @@ int main() {
     default:
         cout << "Vi vibrali ne sushestvuyushuyu operaciyu";
     }
+    cout << "Rezul'tat: " << result;
 }
